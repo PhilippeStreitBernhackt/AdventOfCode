@@ -16,7 +16,7 @@ class Program
             int result = 0;
             while ((line = sr.ReadLine()) != null)
             {
-                result += int.Parse(ProcessLine(line));
+                result += int.Parse(ProcessLineP1(line));
             }
             Console.WriteLine("Result Puzzle 1: " + result.ToString());
 
@@ -26,7 +26,7 @@ class Program
             int result2 = 0;
             while ((line2 = sr2.ReadLine()) != null)
             {
-                result2 += int.Parse(ProcessLine2(line2));
+                result2 += int.Parse(ProcessLineP2(line2));
             }
             Console.WriteLine("Result Puzzle 2: " + result2.ToString());
 
@@ -38,7 +38,7 @@ class Program
         }
     }
 
-    private static string ProcessLine(string input)
+    private static string ProcessLineP1(string input)
     {
         bool firstfound = false;
         string first = "";
@@ -59,7 +59,7 @@ class Program
         return first + last;
     }
 
-    private static string ProcessLine2(string input)
+    private static string ProcessLineP2(string input)
     {
         bool firstfound = false;
         string first = "";

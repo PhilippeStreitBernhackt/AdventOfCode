@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\philippe\\OneDrive - Streit\\Development\\AdventOfCode\\Day1\\Day1.csproj",
+      "projectUniqueName": "D:\\philippe\\OneDrive - Streit\\Development\\AdventOfCode\\AdventOfCode\\Day1\\Day1.csproj",
       "projectName": "Day1",
-      "projectPath": "D:\\philippe\\OneDrive - Streit\\Development\\AdventOfCode\\Day1\\Day1.csproj",
+      "projectPath": "D:\\philippe\\OneDrive - Streit\\Development\\AdventOfCode\\AdventOfCode\\Day1\\Day1.csproj",
       "packagesPath": "C:\\Users\\PhilippeStreit\\.nuget\\packages\\",
-      "outputPath": "D:\\philippe\\OneDrive - Streit\\Development\\AdventOfCode\\Day1\\obj\\",
+      "outputPath": "D:\\philippe\\OneDrive - Streit\\Development\\AdventOfCode\\AdventOfCode\\Day1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PhilippeStreit\\AppData\\Roaming\\NuGet\\NuGet.Config"
