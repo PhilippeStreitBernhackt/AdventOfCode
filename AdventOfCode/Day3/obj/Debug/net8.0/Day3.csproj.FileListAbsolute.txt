@@ -1,0 +1,15 @@
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\Day3.GeneratedMSBuildEditorConfig.editorconfig
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\Day3.AssemblyInfoInputs.cache
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\Day3.AssemblyInfo.cs
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\Day3.csproj.CoreCompileInputs.cache
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\Day3.sourcelink.json
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\bin\Debug\net8.0\Day3.exe
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\bin\Debug\net8.0\Day3.deps.json
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\bin\Debug\net8.0\Day3.runtimeconfig.json
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\bin\Debug\net8.0\Day3.dll
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\bin\Debug\net8.0\Day3.pdb
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\Day3.dll
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\refint\Day3.dll
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\Day3.pdb
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\Day3.genruntimeconfig.cache
+D:\philippe\OneDrive - Streit\Development\AdventOfCode\AdventOfCode\Day3\obj\Debug\net8.0\ref\Day3.dll
