@@ -1,0 +1,14 @@
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\bin\Debug\net7.0\Day1.exe
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\bin\Debug\net7.0\Day1.deps.json
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\bin\Debug\net7.0\Day1.runtimeconfig.json
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\bin\Debug\net7.0\Day1.dll
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\bin\Debug\net7.0\Day1.pdb
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\Day1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\Day1.AssemblyInfoInputs.cache
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\Day1.AssemblyInfo.cs
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\Day1.csproj.CoreCompileInputs.cache
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\Day1.dll
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\refint\Day1.dll
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\Day1.pdb
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\Day1.genruntimeconfig.cache
+C:\Users\ps\dev\AdventOfCode\AdventOfCode\Day1\obj\Debug\net7.0\ref\Day1.dll
