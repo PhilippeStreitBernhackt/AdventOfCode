@@ -45,9 +45,9 @@ class Program
             if(line != string.Empty){
 
                 // Prüfe, ob die Zeile mit einem bekannten Listennamen beginnt
-                if (line.StartsWith(cSeeds))
+                if (line.StartsWith(seeds))
                 {
-                    currentList = cSeeds;
+                    currentList = seeds;
                     // Teile die Zeile bei Leerzeichen, um die Seeds zu extrahieren
                     seeds = line.Split(' ').Skip(1).Select(long.Parse).ToList();
                 }
@@ -66,25 +66,25 @@ class Program
                     Mapping map = new Mapping(values[0], values[1], values[2]);
                     switch (currentList)
                     {
-                        case cSeedToSoilMap:
+                        case cSeedToSoilMap
                             seedToSoilMap.Add(map);
                             break;
-                        case cSoilToFertilizerMap:
+                        case cSoilToFertilizerMap
                             soilToFertilizerMap.Add(map);
                             break;
-                        case cFertilizerToWaterMap:
+                        case cFertilizerToWaterMap
                             fertilizerToWaterMap.Add(map);
                             break;
-                        case cWaterToLightMap:
+                        case cWaterToLightMap
                             waterToLightMap.Add(map);
                             break;
-                        case cLightToTemperatureMap:
-                            lightToTemperatureMap.Add(map);
+                        case cLightToTemperatureMap
+                            cightToTemperatureMap.Add(map);
                             break;
-                        case cTemperatureToHumidityMap:
+                        case cTemperatureToHumidityMap
                             temperatureToHumidityMap.Add(map);
                             break;
-                        case cHumidityToLocationMap:
+                        case cHumidityToLocationMap
                             humidityToLocationMap.Add(map);
                             break;
                     }
