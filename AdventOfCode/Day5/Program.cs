@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 
 class Program
 {
-    private record Mapping(long OutputStart, long InputStart, long Range);
+    private record Mapping(long Dest, long Source, long Range);
     const string cSeeds = "seeds:";
     const string cSeedToSoilMap = "seed-to-soil map:";
     const string cSoilToFertilizerMap = "soil-to-fertilizer map:";
@@ -18,13 +19,10 @@ class Program
     static void Main()
     {
         
-        // Pfad zur Datei
         string filePath = "..\\..\\..\\inputPuzzle1.txt";
-
-        // Dictionary für Seeds
         List<long> seeds = new List<long>();
+        List<long> seedsP2 = new List<long>();
 
-        // Dictionaries für die verschiedenen Mapping-Listen
         List<Mapping> seedToSoilMap = new List<Mapping>();
         List<Mapping> soilToFertilizerMap = new List<Mapping>();
         List<Mapping> fertilizerToWaterMap = new List<Mapping>();
@@ -33,23 +31,30 @@ class Program
         List<Mapping> temperatureToHumidityMap = new List<Mapping>();
         List<Mapping> humidityToLocationMap = new List<Mapping>();
 
-        // Einlesen der Datei
         string[] lines = File.ReadAllLines(filePath);
-
-        // Flag, um die entsprechende Liste zu erkennen
         string currentList = "";
 
-        // Iteriere über jede Zeile der Datei
         foreach (string line in lines)
         {
             if(line != string.Empty){
 
-                // Prüfe, ob die Zeile mit einem bekannten Listennamen beginnt
                 if (line.StartsWith(cSeeds))
                 {
+                    //Puzzle 1
                     currentList = cSeeds;
-                    // Teile die Zeile bei Leerzeichen, um die Seeds zu extrahieren
                     seeds = line.Split(' ').Skip(1).Select(long.Parse).ToList();
+
+                    //Puzzle 2
+                    for(int l = 0; l < seeds.Count; l++)
+                    {
+                        if(l % 2 == 1)
+                        {
+                            for(long x = seeds[l-1]; x < seeds[l-1] + seeds[l]; x++)
+                            {
+                                seedsP2.Add(x);
+                            }
+                        }
+                    }
                 }
                 else if (line.StartsWith(cSeedToSoilMap)) { currentList = cSeedToSoilMap;}
                 else if (line.StartsWith(cSoilToFertilizerMap)) { currentList = cSoilToFertilizerMap;}
@@ -59,7 +64,6 @@ class Program
                 else if (line.StartsWith(cTemperatureToHumidityMap)) { currentList = cTemperatureToHumidityMap;}
                 else if (line.StartsWith(cHumidityToLocationMap)) { currentList = cHumidityToLocationMap;}
 
-                // Fülle die entsprechende Liste basierend auf dem aktuellen Flag
                 else
                 {
                     long[] values = line.Split(' ').Select(long.Parse).ToArray();
@@ -91,12 +95,52 @@ class Program
                 }
             }
         }
-
-        Console.WriteLine("Seeds:");
+       
+        // Puzzle 1
+        long lowest = -1;
         foreach (var seed in seeds)
         {
-            Console.Write(seed + " ");
+            long i = SourceToDestConverter(seedToSoilMap, seed);
+            i = SourceToDestConverter(soilToFertilizerMap, i);
+            i = SourceToDestConverter(fertilizerToWaterMap, i);
+            i = SourceToDestConverter(waterToLightMap, i);
+            i = SourceToDestConverter(lightToTemperatureMap, i);
+            i = SourceToDestConverter(temperatureToHumidityMap, i);
+            i = SourceToDestConverter(humidityToLocationMap, i);
+            if(lowest == -1 || lowest > i) lowest = i;           
         }
+        Console.WriteLine("Puzzle 1: " + lowest.ToString());
+
+        // Puzzle 2
+        lowest = -1;
+        foreach (var seed in seedsP2)
+        {
+            long i = SourceToDestConverter(seedToSoilMap, seed);
+            i = SourceToDestConverter(soilToFertilizerMap, i);
+            i = SourceToDestConverter(fertilizerToWaterMap, i);
+            i = SourceToDestConverter(waterToLightMap, i);
+            i = SourceToDestConverter(lightToTemperatureMap, i);
+            i = SourceToDestConverter(temperatureToHumidityMap, i);
+            i = SourceToDestConverter(humidityToLocationMap, i);
+            if(lowest == -1 || lowest > i) lowest = i;           
+        }
+        Console.WriteLine("Puzzle 2: " + lowest.ToString());
+
+    }
+
+    private static long SourceToDestConverter(List<Mapping> input, long source)
+    {
+        long ret = -1;
+        foreach(Mapping mapping in input)
+        {
+            if(source >= mapping.Source && source < mapping.Source + mapping.Range)
+            {
+                ret = mapping.Dest + (source - mapping.Source);
+            }
+        }
+
+        if(ret == -1) ret = source;
+        return ret;
     }
 }
 
